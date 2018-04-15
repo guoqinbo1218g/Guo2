@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+       	android:id="@+id/rl_publishrtmp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.view.SurfaceView
+            android:id="@+id/surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/button_switchCamera"
+                android:layout_width="0dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:onClick="changeButtonColor"
+                android:src="@drawable/gg_camera_switch"
+                android:text="@string/switchCameraText"
+                android:tint="#83FF23" />
+
+            <Button
+                android:id="@+id/button_start_stop"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"                
+                android:textColor="#ffffff"
+                android:background="@drawable/gg_tuoyuan"
+                android:text="开始\n上传 " />
+
+            <Spinner
+                android:id="@+id/resolutionSelctor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+ 	<WebView
+        android:id="@+id/webviewmain"   
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />	
+</FrameLayout>

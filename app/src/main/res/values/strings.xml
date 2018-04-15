@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hello World</string>
+    <string name="title_activity_main_camera">MainCamera</string>
+
+
+    <string name="shortcutShortLabel">ShortLabel</string>
+    <string name="shortcutShortLabel2">ShortLabe2</string>
+
+    <string name="shortcutLongLabel">shortcutLongLabel</string>
+    <string name="shortcutLongLabel2">shortcutLongLabel2</string>
+    <string name="shortcutDisabledMessage">shortcutDisabledMessage</string>
+    <string name="shortcutDisabledMessage2">shortcutDisabledMessage2</string>
+
+
+    <string name="hint_phonenumber">请输入手机号</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="guo.guo.mainitem._1myview.CanvasPathActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/ToolbarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <guo.guo.mainitem._1myview2.CanvasdrawPath
+            android:id="@+id/path0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <guo.guo.mainitem._1myview2.CanvasPathaddRect
+            android:id="@+id/path1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <guo.guo.mainitem._1myview2.CanvasPathaddPath
+            android:id="@+id/path2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <guo.guo.mainitem._1myview2.CanvasPathaddArc
+            android:id="@+id/path3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <guo.guo.mainitem._1myview2.BezierView
+            android:id="@+id/path4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</RelativeLayout>

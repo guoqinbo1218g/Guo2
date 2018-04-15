@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="guo.guo.mainitem._8callphone.CallphoneActivity">
+    <EditText
+        android:hint="出入要呼叫的手机号"
+        android:id="@+id/et_phoneNumber"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="输入时间间隔,秒为单位,默认60s"
+        android:id="@+id/et_interval"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--   bias  偏移,注意要 有居中属性支持   -->
+    <Button
+        android:id="@+id/btn_begin"
+        android:text="开始呼叫"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintTop_toBottomOf="@id/et_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_end"
+        android:text="结束呼叫"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_interval"
+        app:layout_constraintHorizontal_bias="0.8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--一下是学习ConstraintLayout 代码-->
+    <Button
+        android:id="@+id/btn_test11"
+        android:text="测试11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!--
+        layout_constraintDimensionRatio  注意格式  W/H(or)H/w or H(or W),a:b(ab是数字)
+        宽和高至少要有一个是确定的,不然没效果
+        注意:要有也其他控件其他的约束(父view也可以),还有如果 前面比例只有一个字母.那么这是的字母代表分母
+    -->
+    <Button
+        android:id="@+id/btn_test12"
+        android:text="测试12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_test11"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="0dp" />
+
+    <!--chain 相关     spread_inside    spread  packed -->
+    <Button
+        android:text="A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button2" />
+    <Button
+        android:text="B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button1"
+        app:layout_constraintRight_toLeftOf="@+id/button3"
+        android:layout_marginTop="16dp" />
+    <Button
+        android:text="C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/button3" />
+    <!--下面是有权中的                 weight-->
+    <!--<Button
+        android:text="A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="2"
+        android:id="@+id/button16"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button17" />
+
+
+    <Button
+        android:text="B"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/button17"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button16"
+        app:layout_constraintRight_toLeftOf="@+id/button36"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:text="C"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/button17"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/button36" />-->
+
+
+</android.support.constraint.ConstraintLayout>

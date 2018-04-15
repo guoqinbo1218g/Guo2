@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_item0"
+        android:title="canvas的drawpath方法"
+        android:icon="@mipmap/ic_menu"
+        app:showAsAction="never"
+        />
+
+    <item android:id="@+id/menu_item1"
+        android:title="path的addRect方法"
+        android:icon="@mipmap/ic_search"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/menu_item2"
+        android:title="path的addpath方法"
+        android:icon="@mipmap/ic_wifi"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/menu_item3"
+        android:title="path的addarc方法"
+        android:icon="@mipmap/ic_menu"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/menu_item4"
+        android:title="path的quadTo贝塞尔"
+        android:icon="@mipmap/ic_menu"
+        app:showAsAction="never"
+        />
+
+</menu>

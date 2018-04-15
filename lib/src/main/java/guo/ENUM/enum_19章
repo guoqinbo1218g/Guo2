@@ -1,0 +1,30 @@
+                                            枚举类型
+关键字enum可以将依据具名的值的有限集合创建一个新的类型,而这些具名的值可以做为常规的程序组件使用.
+    Enum类实现了实现了comparable接口，具有compareTo()方法，还实现了serializable接口
+
+    api:
+        Class<E>  getDeclaringClass() 返回与此枚举常量的枚举类型相对应的 Class 对象。
+        int       ordinal()           返回枚举常量的序数（它在枚举声明中的位置，其中初始常量序数为零）。
+        String    toString()          返回枚举常量的名称，它包含在声明中。
+        String    name()              返回此枚举常量的名称，在其枚举声明中对其进行声明。
+        int       compareTo(E o)      比较此枚举与指定对象的顺序。
+        static <T extends Enum<T>> T  valueOf(Class<T> enumType, String name)   返回带指定名称的指定枚举类型的枚举常量。
+
+enum中可以添加新方法（除了不能继承自enum，可以把enum看作是一个常规类，即可以向enum中添加方法，甚至main()）
+        如果自定义方法，必须在enum实例序列最后添加一个分号.
+        同时,Java要求必须先定义enum实例.如果在定义enum实例之前定义了属性或方法,报错(包括构造方法).
+        enum的构造器 访问权限无太大影响,因为只能在enum内部使用构造器来创建enum实例.enum定义结束后,编译器不再允许使用构造器创建实例.
+
+enum: values()的神秘之处： class
+        注Enum类并没有values()方法, 在创建enum时,编译器为为其添加valueOf()方法,此方法只一个参数
+        注意Enum中双参 static方法valueOf(Class<T> var0, String var1)
+
+反编译无法获得Enum的完整信息.
+由于values()方法是编译器插入到enum定义中的static方法,所以向上转型为Enum后,values()方法不再可用,
+    不过class 类中有getEnumConstants()方法,这样也可通过class对象获得所有enum实例
+
+由于 所有enum都继承自java.lang.Enum类,Java不支持多继承所以enum不能在继承其他类,但可以实现多个接口
+
+由于不能从enum添加或删除元素,不适合使用set,java5 后引入EnumSet
+
+EnumMap 是一种特殊的Map，要求键key必须是enum,不过

@@ -1,0 +1,4 @@
+java.lang 包中内置的三个注解:
+    1.@Override:
+    2.@Deprecated:过时的,使用后编译器会发出警告信息.
+    3.SuppressWarnings 关闭不当的编译器警告信息

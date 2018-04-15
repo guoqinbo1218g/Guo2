@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/lib/src/main/java/guo/annotation/HelloAnnotation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/lib/src/main/java/guo/st_reflect/Ref_Constructor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/lib/src/main/java/guo/st_reflect/Ref_Field.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/lib/src/main/java/guo/st_reflect/Ref_class.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

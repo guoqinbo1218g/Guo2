@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="entries_list_preference">
+        <item>entry0</item>
+        <item>entry1</item>
+        <item>entry2</item>
+        <item>entry3</item>
+    </array>
+    <array name="entryvalues_list_preference">
+        <item>entryValue0</item>
+        <item>entryValue1</item>
+        <item>entryValue2</item>
+        <item>entryValue3</item>
+    </array>
+</resources>
